@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  background-image: url(new_back.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: rgb(19, 19, 19);
+  font-size: 40px;
+  text-shadow: 
+      -2px -2px 0 black,  
+       2px -2px 0 black,  
+      -2px  2px 0 black,  
+       2px  2px 0 black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Webcam and Icons */
+.video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  width: 100%;
+  max-width: 350px;
+  border: 3px solid #0a0a0a;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(62, 62, 62, 0.4);
+}
+
+/* Icon Box */
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  right: -60px;
+}
+
+/* Upload & Download Icons */
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-wrapper img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  background: #39d8f8;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #62aaf3;
+  transform: scale(1.05);
+}
+
+/* Preview Images */
+.preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.preview img {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #115de9;
+  box-shadow: 0px 4px 8px rgba(130, 128, 40, 0.4);
+}
+
+/* Result Image */
+#swappedImage {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 3px solid #d81435;
+  box-shadow: 0px 6px 12px rgba(245, 179, 210, 0.5);
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .preview img {
+    width: 120px;
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .icon-box {
+    right: -50px;
+  }
+
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-wrapper img {
+    width: 24px;
+    height: 24px;
+  }
+}
