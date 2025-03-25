@@ -51,7 +51,7 @@ function handleDownload() {
         alert("Capture an image first before downloading!");
     } else {
         const downloadButton = document.getElementById("downloadButton");
-        downloadButton.href = images.image1; 
+        downloadButton.href = swapped.jpg; 
         downloadButton.download = "swapped_image.jpg"; 
     }
 }
